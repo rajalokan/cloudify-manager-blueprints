@@ -50,7 +50,7 @@ node_templates:
       openstack_config: *openstack_config
       resource_id: { concat: ['alok-', { get_input: server_name } ] }
       image: { get_secret: centos_core_image }
-      flavor: { get_secret: small_image_flavor  }
+      flavor: { get_secret: medium_image_flavor  }
       agent_config:
         user: { get_input: agent_user }
         network: external
