@@ -10,6 +10,9 @@ inputs:
   server_name:
     type: string
 
+  manager_admin_password:
+    type: string
+
   agent_user:
     description: >
       User for connecting to agent VMs
