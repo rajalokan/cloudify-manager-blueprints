@@ -27,6 +27,7 @@ ctx logger info "Using Private IP: ${PRIVATE_IP} and Public IP: ${PUBLIC_IP}"
 sudo sed -i "0,/\s*private_ip:.*/s//  private_ip: '${PRIVATE_IP}'/" /etc/cloudify/config.yaml
 sudo sed -i "0,/\s*public_ip:.*/s//  public_ip: '${PUBLIC_IP}'/" /etc/cloudify/config.yaml
 sudo sed -i '0,/\s*skip_installation:.*/s//    skip_installation: false/' /etc/cloudify/config.yaml
+sudo sed -i '0,/\s*skip_sanity:.*/s//  skip_sanity: true/' /etc/cloudify/config.yaml
 sudo sed -i "0,/\s*networks:.*/s//  networks: {default: ${PRIVATE_IP}, external: ${PUBLIC_IP}}/" /etc/cloudify/config.yaml
 sudo sed -i "0,/\s*admin_password:.*/s//    admin_password: \"${admin_password}\"/" /etc/cloudify/config.yaml
 
